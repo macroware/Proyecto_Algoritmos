@@ -84,5 +84,3 @@ int Borrar(int pos)
 	med[pos]=med[indice];   /*Aqui falta ver si se puede hacer esto o bien hay que hacer elemento por elemento*/
 	indice --;
 }
-
-int farmacos
