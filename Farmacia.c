@@ -1,12 +1,14 @@
 #include <stdlib.h>
 #include <stdio.h>
+#include <string.h>
+
 #define MAX 30
 
 int indice;
 
 typedef struct{
 	
-	char nombre_med[];
+	char *med;
 	char grupo_med[];
 	float precio;
 	char sintomas[];
@@ -106,19 +108,22 @@ int Menu(char texto[], int n)
 		}
 	}while(opcion<1 || opcion>n);
 	return opcion;
-};
+}
 
 void captura_medicamento(Medicamento med)
 {
-
-};
+	printf("Ingrese el nombre del medicamento: ");
+	fflush(stdin);
+	gets(&med);
+	
+}
 
 int Borrar(int pos)
 {
 	/*Faltan determinar parametros*/
 
 	indice --;
-};
+}
 
 int Buscar(char cap[])
 {
@@ -133,7 +138,7 @@ int Buscar(char cap[])
 	else
 		printf("No existe el dato");
 	return -1;
-};
+}
 
 void Actualizar(int pos)
 {
